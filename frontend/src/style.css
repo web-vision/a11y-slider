@@ -24,7 +24,7 @@ img {
     max-width: 100%;
 }
 
-#rzt-slider [hidden] {
+.viewport [hidden] {
     display: none !important;
 }
 
@@ -267,11 +267,11 @@ li.indicator {
     display: block;
 }
 
-#previous {
+.btn-previous {
     left: 0;
 }
 
-#next {
+.btn-next {
     right: 0;
     transform: rotate(180deg);
 }
@@ -282,54 +282,54 @@ button svg {
 }
 
 /* Instructions need work */
-#instructions {
+.instructions {
     position: relative;
 }
 
-#instructions p {
+.instructions p {
     padding: 1rem;
     text-align: center;
     color: #fefefe;
     background-color: #111;
 }
 
-#focus,
-#hover,
-#hover-and-focus,
-#touch {
+.rzt-slider .focus,
+.rzt-slider .hover,
+.rzt-slider .hover-and-focus,
+.rzt-slider .touch {
     display: none;
 }
 
-.slider:focus + #instructions #focus,
-.slider:hover + #instructions #hover {
+.slider:focus + .rzt-slider .focus,
+.slider:hover + .rzt-slider .hover {
     display: block;
 }
 
-.slider:hover + #instructions #hover + #focus {
+.slider:hover + .rzt-slider .hover + .focus {
     display: none;
 }
 
-.slider:hover:focus + #instructions #hover,
-.slider:hover:focus + #instructions #focus {
+.slider:hover:focus + .rzt-slider .hover,
+.slider:hover:focus + .rzt-slider .focus {
     display: none;
 }
 
-.slider:hover:focus + #instructions #hover-and-focus {
+.slider:hover:focus + .rzt-slider .hover-and-focus {
     display: block;
 }
 
-#instructions svg {
+.instructions svg {
     height: 1.5rem;
     width: 1.5rem;
     fill: #fff;
     vertical-align: -0.5rem;
 }
 
-.touch #instructions p {
+.touch .instructions p {
     display: none !important;
 }
 
-.touch #instructions #touch {
+.touch .instructions .touch {
     display: block !important;
 }
 
@@ -352,18 +352,18 @@ button svg {
     }
 }
 
-button#stop-button {
+button.stop-button {
     position: absolute;
     bottom: 1rem;
     right: 1rem;
 }
 
 /* This animates the circle when it switches to play */
-#circle {
+.circle {
 	transition: stroke-dashoffset 300ms ease-in;
 	stroke-dashoffset: 0;
 	fill: none;
 }
-#circle.play {
+.circle.play {
 	stroke-dashoffset: 314;
 }

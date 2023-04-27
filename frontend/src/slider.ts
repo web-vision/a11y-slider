@@ -7,8 +7,8 @@ window.addEventListener('touchstart', function touched() {
 }, false);
 
 
-const slider: HTMLElement | null = document.querySelector('#rzt-slider');
-const carousel: HTMLElement | null = document.querySelector('#rzt-slider .slider');
+const slider: HTMLElement | null = document.querySelector('.rzt-slider');
+const carousel: HTMLElement | null = document.querySelector('.rzt-slider .slider');
 const indicators: NodeListOf<HTMLElement> | null  = document.querySelectorAll('.indicator-button');
 // const indicatorText: NodeListOf<HTMLElement> = document.querySelectorAll('.indicator-button .visuallyhidden');
 const scroller:  HTMLElement | null = document.querySelector('.scroll')
@@ -18,7 +18,7 @@ const arrowLeft: HTMLElement = arrows[0]
 const arrowRight: HTMLElement = arrows[1]
 const stopBtn = document.querySelector('#stop-button');
 
-let interVal: number
+let interVal: ReturnType<typeof setTimeout>;
 
 function initSlider () {
   if (indicators === null || scroller === null) return;
@@ -45,7 +45,7 @@ function initSlider () {
         e.preventDefault()
         e.stopPropagation()
 
-        if (arrow.id === 'next') {
+        if (arrow.id === 'btn-next') {
             arrowLeft.hidden = false;
             scrollDirection = Math.floor(scroller.scrollLeft + (scroller.scrollWidth / numberOfImages))
         }

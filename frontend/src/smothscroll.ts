@@ -7,7 +7,6 @@ function smoothScrollPolyfill(node: any, key: any, target: any) {
   type target = typeof target;
   type node = typeof node;
   type key = typeof key;
-  console.log(target, node, key);
 
   const offset = node[key]
   const gap = target - offset
@@ -79,7 +78,7 @@ function smoothScroll(node: any, topOrLeft: any, horizontal: any) {
 }
 
 function debounce (func: any, ms: number) {
-  let timeout: number | null;
+  let timeout: any;
   return () => {
         // @ts-ignore
       clearTimeout(timeout)
