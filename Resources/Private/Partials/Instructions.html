@@ -1,0 +1,40 @@
+<f:if condition="{slider.options.instructions}">
+    <div id="instructions-{data.uid}" class="instructions">
+        <p id="touch-{data.uid}" class="touch">
+            <svg aria-hidden="true" focusable="false">
+                <use xlink:href="#arrow-left"></use>
+            </svg>
+            swipe for more
+            <svg aria-hidden="true" focusable="false">
+                <use xlink:href="#arrow-right" />
+            </svg>
+        </p>
+        <p id="hover-{data.uid}" class="hover">
+            <svg aria-hidden="true" focusable="false">
+                <use xlink:href="#arrow-left"></use>
+            </svg>
+            scroll for more
+            <svg aria-hidden="true" focusable="false">
+                <use xlink:href="#arrow-right" />
+            </svg>
+        </p>
+        <p id="focus-{data.uid}" class="focus">
+            <svg aria-hidden="true" focusable="false">
+                <use xlink:href="#arrow-left"></use>
+            </svg>
+            use your arrow keys for more
+            <svg aria-hidden="true" focusable="false">
+                <use xlink:href="#arrow-right" />
+            </svg>
+        </p>
+        <p id="hover-and-focus-{data.uid}" class="hover-and-focus">
+            <svg aria-hidden="true" focusable="false">
+                <use xlink:href="#arrow-left"></use>
+            </svg>
+            scroll or use arrow keys for more
+            <svg aria-hidden="true" focusable="false">
+                <use xlink:href="#arrow-right" />
+            </svg>
+        </p>
+    </div>
+</f:if>

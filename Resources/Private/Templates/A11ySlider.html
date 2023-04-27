@@ -1,150 +1,131 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 
-<div id="rzt-slider" class="rzt-slider viewport {f:if(condition: '{slider.options.sliderSmall}', then: 'slider-small', else: '')}"  data-autoplay="{slider.options.autoplay}" data-infinite="{slider.options.infinite}" data-autoplay-speed="{slider.options.autoplaySpeed}">
-    <!-- <div class="viewport">
-        <div class="carousel-frame"> -->
-            <div class="slider scroll" role="region" tabindex="0" aria-describedby="instructions" aria-label="galerie">
-                <ul class="scroll-frame">
-                    <f:for each="{files}" as="file" iteration="index">
-                        <li class="scroll-item-outer">
-                            <f:if condition="{slider.options.overlay}">
-                                <div class="scroll-overlay"></div>
-                            </f:if>
-                            <!-- <f:if condition="{file.link}">
+<div id="rzt-slider-{data.uid}"
+    class="rzt-slider viewport {f:if(condition: '{slider.options.sliderSmall}', then: 'slider-small', else: '')}"
+    data-autoplay="{slider.options.autoplay}" data-infinite="{slider.options.infinite}"
+    data-autoplay-speed="{slider.options.autoplaySpeed}">
+
+    <div class="slider scroll" role="region" tabindex="0" aria-describedby="instructions-{data.uid}" aria-label="galerie">
+        <ul class="scroll-frame">
+            <f:for each="{files}" as="file" iteration="index">
+                <li class="scroll-item-outer">
+                    <f:if condition="{slider.options.overlay}">
+                        <div class="scroll-overlay"></div>
+                    </f:if>
+                    <!-- <f:if condition="{file.link}">
                                 <a class="carousel-link" href="{f:uri.typolink(parameter: '{file.link}')}" aria-labelledby="c-title"></a>
                             </f:if> -->
-                            <figure class="scroll-item">
-                                <f:if condition="{file.title}">
-                                    <header class="container">
-                                        <f:if condition="{file.link}">
-                                            <f:then>
-                                                <a class="carousel-title-link" href="{f:uri.typolink(parameter: '{file.link}')}">
-                                                    <h2 id="c-title" class="carousel-title">{file.title}</h2>
-                                                </a>
-                                            </f:then>
-                                            <f:else>
-                                                <h2 id="c-title" class="carousel-title">{file.title}</h2>
-                                            </f:else>
-                                        </f:if>
-
-                                    </header>
+                    <figure class="scroll-item">
+                        <f:if condition="{file.title}">
+                            <header>
+                                <f:if condition="{file.link}">
+                                    <f:then>
+                                        <a class="carousel-title-link"
+                                            href="{f:uri.typolink(parameter: '{file.link}')}">
+                                            <h2 id="c-title-{data.uid}" class="carousel-title">{file.title}</h2>
+                                        </a>
+                                    </f:then>
+                                    <f:else>
+                                        <h2 id="c-title-{data.uid}" class="carousel-title">{file.title}</h2>
+                                    </f:else>
                                 </f:if>
-                                <picture>
-                                    <source srcset="{f:uri.image(image:file, cropVariant: 'desktop', maxWidth: 1601, fileExtension: 'webp')}"
-                                        media="(min-width: 1201px)" type="image/webp">
-                                    <source srcset="{f:uri.image(image:file, cropVariant: 'desktop', maxWidth: 1600, fileExtension: 'jpg')}"
-                                        media="(min-width: 1201px)" type="image/jpeg">
+                            </header>
+                        </f:if>
 
-                                    <source srcset="{f:uri.image(image:file, cropVariant: 'desktop', maxWidth: 1201, fileExtension: 'webp')}"
-                                        media="(min-width: 769px)" type="image/webp">
-                                    <source srcset="{f:uri.image(image:file, cropVariant: 'desktop', maxWidth: 1200, fileExtension: 'jpg')}"
-                                        media="(min-width: 769px)" type="image/jpeg">
+                        <f:render partial="Pictures" arguments="{_all}" />
 
-                                    <source srcset="{f:uri.image(image:file, cropVariant: 'tablet', maxWidth: 769, fileExtension: 'webp')}"
-                                        media="(min-width: 481px)" type="image/webp">
-                                    <source srcset="{f:uri.image(image:file, cropVariant: 'tablet', maxWidth: 768, fileExtension: 'jpg')}"
-                                        media="(min-width: 481px)" type="image/jpeg">
-
-                                    <source srcset="{f:uri.image(image:file, cropVariant: 'mobile', maxWidth: 481, fileExtension: 'webp')}"
-                                        type="image/webp">
-                                    <source srcset="{f:uri.image(image:file, cropVariant: 'mobile', maxWidth: 480, fileExtension: 'jpg')}"
-                                        type="image/jpeg">
-
-                                    <img class="image-embed-item"
-                                        alt="{file.alternative -> f:format.nl2br()}"
-                                        src="{f:uri.image(image:file, maxWidth: 1600)}"
-                                        width="{dimensions.width}"
-				                        height="{dimensions.height}"
-                                        loading="{f:if(condition: '{index.isFirst}', then: 'eager', else: 'lazy')}"
-                                        decoding="async"
-                                    />
-                                </picture>
-
-                                <f:if condition="{file.description} && {slider.options.description}">
-                                    <figcaption>
-                                        {file.description}
-                                    </figcaption>
-                                </f:if>
-                            </figure>
-                        </li>
-                    </f:for>
-                </ul>
-                <f:if condition="{slider.options.arrows}">
-                    <ul class="carousel-controls" aria-label="galerie controls">
-                        <li><button class="btn" id="previous" aria-label="zurück" hidden>
-                            <svg viewBox="0 0 640 640" width="60" height="60"><defs><path d="M113.4 318.3L434.36 2.03L456.43 24.42L135.47 340.7L113.4 318.3Z" id="bc1TPsYsJ"/><path d="M135.79 296.98L452.07 617.93L429.68 640L113.4 319.04L135.79 296.98Z" id="iwQdVHQB3"/><path d="M155.57 318.3L455.1 23.14L477.17 45.53L177.63 340.7L155.57 318.3Z" id="c1ksEkVkGi"/><path d="M177.96 296.98L473.45 596.84L451.06 618.91L155.57 319.04L177.96 296.98Z" id="hl7MnK8Pf"/></defs><g><g><g><use xlink:href="#bc1TPsYsJ" opacity="1" fill="#ffffff" fill-opacity="1"/></g><g><use xlink:href="#iwQdVHQB3" opacity="1" fill="#ffffff" fill-opacity="1"/></g><g><use xlink:href="#c1ksEkVkGi" opacity="1" fill="#000000" fill-opacity="1"/></g><g><use xlink:href="#hl7MnK8Pf" opacity="1" fill="#000000" fill-opacity="1"/></g></g></g></svg>
-                        </button></li>
-                        <li><button class="btn" id="next" aria-label="weiter">
-                            <svg viewBox="0 0 640 640" width="60" height="60"><defs><path d="M113.4 318.3L434.36 2.03L456.43 24.42L135.47 340.7L113.4 318.3Z" id="bc1TPsYsJ"/><path d="M135.79 296.98L452.07 617.93L429.68 640L113.4 319.04L135.79 296.98Z" id="iwQdVHQB3"/><path d="M155.57 318.3L455.1 23.14L477.17 45.53L177.63 340.7L155.57 318.3Z" id="c1ksEkVkGi"/><path d="M177.96 296.98L473.45 596.84L451.06 618.91L155.57 319.04L177.96 296.98Z" id="hl7MnK8Pf"/></defs><g><g><g><use xlink:href="#bc1TPsYsJ" opacity="1" fill="#ffffff" fill-opacity="1"/></g><g><use xlink:href="#iwQdVHQB3" opacity="1" fill="#ffffff" fill-opacity="1"/></g><g><use xlink:href="#c1ksEkVkGi" opacity="1" fill="#000000" fill-opacity="1"/></g><g><use xlink:href="#hl7MnK8Pf" opacity="1" fill="#000000" fill-opacity="1"/></g></g></g></svg>
-                        </button></li>
-                    </ul>
-                </f:if>
-            </div>
-
-        <svg style="display:none">
-            <symbol id="arrow-left" viewBox="0 0 10 10">
-                <path fill="currentColor" d="m9 4h-4v-2l-4 3 4 3v-2h4z"/>
-            </symbol>
-            <symbol id="arrow-right" viewBox="0 0 10 10">
-                <path fill="currentColor" d="m1 4h4v-2l4 3-4 3v-2h-4z"/>
-            </symbol>
-        </svg>
-        <f:if condition="{slider.options.instructions}">
-            <div id="instructions">
-                <p id="touch">
-                  <svg aria-hidden="true" focusable="false"><use xlink:href="#arrow-left"></use></svg>
-                  swipe for more
-                  <svg aria-hidden="true" focusable="false"><use xlink:href="#arrow-right"/></svg>
-                </p>
-                <p id="hover">
-                  <svg aria-hidden="true" focusable="false"><use xlink:href="#arrow-left"></use></svg>
-                  scroll for more
-                  <svg aria-hidden="true" focusable="false"><use xlink:href="#arrow-right"/></svg>
-                </p>
-                <p id="focus">
-                  <svg aria-hidden="true" focusable="false"><use xlink:href="#arrow-left"></use></svg>
-                  use your arrow keys for more
-                  <svg aria-hidden="true" focusable="false"><use xlink:href="#arrow-right"/></svg>
-                </p>
-                <p id="hover-and-focus">
-                  <svg aria-hidden="true" focusable="false"><use xlink:href="#arrow-left"></use></svg>
-                  scroll or use arrow keys for more
-                  <svg aria-hidden="true" focusable="false"><use xlink:href="#arrow-right"/></svg>
-                </p>
-            </div>
+                        <f:if condition="{file.description} && {slider.options.description}">
+                            <figcaption>
+                                {file.description}
+                            </figcaption>
+                        </f:if>
+                    </figure>
+                </li>
+            </f:for>
+        </ul>
+        <f:if condition="{slider.options.arrows}">
+            <ul class="carousel-controls">
+                <li>
+                    <button class="btn-previous" id="btn-previous" hidden>
+                        <span class="visuallyhidden">Vorheriges Bild</span>
+                        <svg viewBox="0 0 640 640" width="60" height="60">
+                            <defs>
+                                <path d="M113.4 318.3L434.36 2.03L456.43 24.42L135.47 340.7L113.4 318.3Z"
+                                    id="bc1TPsYsJ" />
+                                <path d="M135.79 296.98L452.07 617.93L429.68 640L113.4 319.04L135.79 296.98Z"
+                                    id="iwQdVHQB3" />
+                                <path d="M155.57 318.3L455.1 23.14L477.17 45.53L177.63 340.7L155.57 318.3Z"
+                                    id="c1ksEkVkGi" />
+                                <path d="M177.96 296.98L473.45 596.84L451.06 618.91L155.57 319.04L177.96 296.98Z"
+                                    id="hl7MnK8Pf" />
+                            </defs>
+                            <g>
+                                <g>
+                                    <g>
+                                        <use xlink:href="#bc1TPsYsJ" opacity="1" fill="#ffffff" fill-opacity="1" />
+                                    </g>
+                                    <g>
+                                        <use xlink:href="#iwQdVHQB3" opacity="1" fill="#ffffff" fill-opacity="1" />
+                                    </g>
+                                    <g>
+                                        <use xlink:href="#c1ksEkVkGi" opacity="1" fill="#000000" fill-opacity="1" />
+                                    </g>
+                                    <g>
+                                        <use xlink:href="#hl7MnK8Pf" opacity="1" fill="#000000" fill-opacity="1" />
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </li>
+                <li>
+                    <button class="btn-next" id="btn-next">
+                        <span class="visuallyhidden">Nächstes Bild</span>
+                        <svg viewBox="0 0 640 640" width="60" height="60">
+                            <defs>
+                                <path d="M113.4 318.3L434.36 2.03L456.43 24.42L135.47 340.7L113.4 318.3Z"
+                                    id="bc1TPsYsJ" />
+                                <path d="M135.79 296.98L452.07 617.93L429.68 640L113.4 319.04L135.79 296.98Z"
+                                    id="iwQdVHQB3" />
+                                <path d="M155.57 318.3L455.1 23.14L477.17 45.53L177.63 340.7L155.57 318.3Z"
+                                    id="c1ksEkVkGi" />
+                                <path d="M177.96 296.98L473.45 596.84L451.06 618.91L155.57 319.04L177.96 296.98Z"
+                                    id="hl7MnK8Pf" />
+                            </defs>
+                            <g>
+                                <g>
+                                    <g>
+                                        <use xlink:href="#bc1TPsYsJ" opacity="1" fill="#ffffff" fill-opacity="1" />
+                                    </g>
+                                    <g>
+                                        <use xlink:href="#iwQdVHQB3" opacity="1" fill="#ffffff" fill-opacity="1" />
+                                    </g>
+                                    <g>
+                                        <use xlink:href="#c1ksEkVkGi" opacity="1" fill="#000000" fill-opacity="1" />
+                                    </g>
+                                    <g>
+                                        <use xlink:href="#hl7MnK8Pf" opacity="1" fill="#000000" fill-opacity="1" />
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
         </f:if>
-        <!-- </div>
-    </div> -->
-    <f:if condition="{slider.options.dots}">
-    <ul class="slidenav indicators">
-        <f:for each="{files}" as="file" iteration="it">
-            <f:if condition="{it.isFirst}">
-                <f:then>
-                    <li class="indicator">
-                        <button class="indicator-button" aria-pressed="true">
-                            <span class="visuallyhidden">Aktuelles Bild</span>
-                        </button>
-                    </li>
-                </f:then>
-                <f:else>
-                    <li class="indicator">
-                        <button class="indicator-button">
-                            <span class="visuallyhidden">Bild {it.cycle}</span>
-                        </button>
-                    </li>
-                </f:else>
-            </f:if>
-        </f:for>
-    </ul>
-    <!-- <button id="stop-button" class="reset-button-style">
-        <svg aria-hidden="true" focusable="false">
-            <circle cx="25" cy="25" r="26" stroke="#fff" stroke-width="3"></circle>
-              <rect id="stop" x="15" y="15" width="21" height="21" fill="white"/>
-              <polygon id="play" fill="white" points="20,16 20,36 36,26"></polygon>
-        </svg>
-        <span class="visuallyhidden">Stop Slider</span>
-    </button> -->
-    </f:if>
+    </div>
+
+    <svg style="display:none">
+        <symbol id="arrow-left" viewBox="0 0 10 10">
+            <path fill="currentColor" d="m9 4h-4v-2l-4 3 4 3v-2h4z" />
+        </symbol>
+        <symbol id="arrow-right" viewBox="0 0 10 10">
+            <path fill="currentColor" d="m1 4h4v-2l4 3-4 3v-2h-4z" />
+        </symbol>
+    </svg>
+    <f:render partial="Instructions" arguments="{_all}" />
+
+    <f:render partial="Indicators" arguments="{_all}" />
 </div>
 
 <f:asset.script identifier="sliderjs" type="module" src="EXT:a11y_slider/Resources/Public/index.js" />

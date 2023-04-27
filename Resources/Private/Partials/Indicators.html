@@ -1,0 +1,22 @@
+<f:if condition="{slider.options.dots}">
+    <ol class="slidenav indicators">
+        <f:for each="{files}" as="file" iteration="it">
+            <f:if condition="{it.isFirst}">
+                <f:then>
+                    <li class="indicator">
+                        <button class="indicator-button" aria-pressed="true">
+                            <span class="visuallyhidden">Aktuelles Bild</span>
+                        </button>
+                    </li>
+                </f:then>
+                <f:else>
+                    <li class="indicator">
+                        <button class="indicator-button">
+                            <span class="visuallyhidden">Bild {it.cycle} anziegen</span>
+                        </button>
+                    </li>
+                </f:else>
+            </f:if>
+        </f:for>
+    </ol>
+</f:if>

@@ -1,0 +1,35 @@
+<picture>
+    <source
+        srcset="{f:uri.image(image:file, cropVariant: 'desktop', maxWidth: 1601, fileExtension: 'webp')}"
+        media="(min-width: 1201px)" type="image/webp">
+    <source
+        srcset="{f:uri.image(image:file, cropVariant: 'desktop', maxWidth: 1600, fileExtension: 'jpg')}"
+        media="(min-width: 1201px)" type="image/jpeg">
+
+    <source
+        srcset="{f:uri.image(image:file, cropVariant: 'desktop', maxWidth: 1201, fileExtension: 'webp')}"
+        media="(min-width: 769px)" type="image/webp">
+    <source
+        srcset="{f:uri.image(image:file, cropVariant: 'desktop', maxWidth: 1200, fileExtension: 'jpg')}"
+        media="(min-width: 769px)" type="image/jpeg">
+
+    <source
+        srcset="{f:uri.image(image:file, cropVariant: 'tablet', maxWidth: 769, fileExtension: 'webp')}"
+        media="(min-width: 481px)" type="image/webp">
+    <source
+        srcset="{f:uri.image(image:file, cropVariant: 'tablet', maxWidth: 768, fileExtension: 'jpg')}"
+        media="(min-width: 481px)" type="image/jpeg">
+
+    <source
+        srcset="{f:uri.image(image:file, cropVariant: 'mobile', maxWidth: 481, fileExtension: 'webp')}"
+        type="image/webp">
+    <source
+        srcset="{f:uri.image(image:file, cropVariant: 'mobile', maxWidth: 480, fileExtension: 'jpg')}"
+        type="image/jpeg">
+
+    <img class="image-embed-item" alt="{file.alternative -> f:format.nl2br()}"
+        src="{f:uri.image(image:file, maxWidth: 1600)}" width="{dimensions.width}"
+        height="{dimensions.height}"
+        loading="{f:if(condition: '{index.isFirst}', then: 'eager', else: 'lazy')}"
+        decoding="async" />
+</picture>
