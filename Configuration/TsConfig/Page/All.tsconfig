@@ -1,0 +1,4 @@
+#
+# Content Elements
+#
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:a11y_slider/Configuration/TsConfig/Page/Mod/Wizards/ContentElements.tsconfig">

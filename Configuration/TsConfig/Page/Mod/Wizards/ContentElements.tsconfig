@@ -1,0 +1,13 @@
+mod.wizards.newContentElement.wizardItems.common {
+	elements {
+		a11y_slider {
+			iconIdentifier = content-image
+			title = LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:wizard.title
+			description = LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:wizard.description
+			tt_content_defValues {
+				CType = a11y_slider
+			}
+		}
+	}
+	show := addToList(a11y_slider)
+}

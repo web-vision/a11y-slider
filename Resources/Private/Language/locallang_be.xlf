@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2021-03-07UTC22:18:310">
+        <header>
+            <authorName>Riad</authorName>
+            <authorEmail>riad@web-vision.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="wizard.title">
+                <source>Slider</source>
+            </trans-unit>
+            <trans-unit id="wizard.description">
+                <source>A Simple Slider</source>
+            </trans-unit>
+            <trans-unit id="tca.tab.sliderElements">
+				<source>Slider Elements</source>
+			</trans-unit>
+			<trans-unit id="flexform.instructions">
+				<source>Enable Instructions</source>
+			</trans-unit>
+			<trans-unit id="flexform.description">
+				<source>Enable Description</source>
+			</trans-unit>
+			<trans-unit id="flexform.overlay">
+				<source>Background Overlay</source>
+			</trans-unit>
+			<trans-unit id="flexform.dots">
+				<source>Enable Dots (Controls)</source>
+			</trans-unit>
+			<trans-unit id="flexform.arrows">
+				<source>Enable Arrows (Controls)</source>
+			</trans-unit>
+			<trans-unit id="flexform.infinite">
+				<source>Infinite</source>
+			</trans-unit>
+			<trans-unit id="flexform.autoplay">
+				<source>Autoplay</source>
+			</trans-unit>
+			<trans-unit id="flexform.autoplaySpeed">
+				<source>Autoplay Speed</source>
+			</trans-unit>
+			<trans-unit id="flexform.sliderSmall">
+				<source>Small Slider (Height)</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

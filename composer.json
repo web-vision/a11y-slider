@@ -1,0 +1,26 @@
+
+{
+  "name": "web-vision/a11y-slider",
+  "type": "typo3-cms-extension",
+  "minimum-stability": "stable",
+  "description": "An super light slider with a11y",
+  "license": "GPL-2.0-or-later",
+  "version": "1.0.0",
+  "require": {
+      "typo3/cms-core": "^11.5"
+  },
+  "authors": [{
+      "name": "Riad Zejnilagic Trumic",
+      "email": "riad@web-vision.de"
+  }],
+  "autoload": {
+      "psr-4": {
+          "WebVision\\A11ySlider\\": "Classes/"
+      }
+  },
+  "extra": {
+      "typo3/cms": {
+          "extension-key": "a11y_slider"
+      }
+    }
+}
