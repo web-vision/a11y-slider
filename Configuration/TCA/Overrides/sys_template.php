@@ -1,14 +1,9 @@
 <?php
 
-if (!defined('TYPO3')) {
-    die('Access denied.');
-}
-(function () {
-    $extensionKey = 'a11y_slider';
-
+(static function (): void {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        $extensionKey,
+        'a11y_slider',
         'Configuration/TypoScript',
-        'A11ySlider'
+        'A11y Slider'
     );
 })();

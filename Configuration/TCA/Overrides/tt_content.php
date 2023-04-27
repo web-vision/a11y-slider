@@ -9,12 +9,12 @@ if (!defined('TYPO3')) {
     $customLanguageFilePrefix = 'LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:';
     $frontendLanguageFilePrefix = 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:';
 
-    // Add the CType "wv_slider"
+    // Add the CType "a11y_slider"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
         'CType',
         [
-            'LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:wizard.title',
+            $customLanguageFilePrefix . 'wizard.title',
             'a11y_slider',
             'content-image'
         ],
@@ -36,7 +36,7 @@ if (!defined('TYPO3')) {
         'columnsOverrides' => [
             'image' => [
                 'label'  => $languageFilePrefix . 'tt_content.media_references',
-                'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig('media', [
+                'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig('image', [
                     'appearance'    => [
                         'createNewRelationLinkTitle' => $languageFilePrefix . 'tt_content.media_references.addFileReference'
                     ],
