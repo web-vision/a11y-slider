@@ -21,7 +21,9 @@ tt_content {
 // Hide Elements if JS is disabled
 page.headerData {
     3 = TEXT
-    3.value(
-        <noscript><style>.indicators { display:none !important; }</style></noscript>
-    )
+    3.value = <noscript><style>.indicators { display:none !important; }</style></noscript>
+}
+page.includeCSS {
+    style = EXT:a11y_slider/Resources/Public/index.css
+    style.inline = 1
 }
