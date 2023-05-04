@@ -24,14 +24,12 @@ function initSlider () {
   if (indicators === null || scroller === null) return;
 
   autoPlay();
-  setAriaLabels();
   addListeners();
 
   indicators.forEach((indicator, i) => {
     indicator.addEventListener('click', e => {
         e.preventDefault()
         e.stopPropagation()
-        // setAriaPressed(i)
 
         const scrollLeft = Math.floor(scroller.scrollWidth * (i / numberOfImages))
         smoothScroll(scroller, scrollLeft, true)
@@ -44,6 +42,7 @@ function initSlider () {
     arrow.addEventListener('click', e => {
         e.preventDefault()
         e.stopPropagation()
+        setAriaPressed(Math.round((scroller.scrollLeft / scroller.scrollWidth) * numberOfImages));
 
         if (arrow.id === 'btn-next') {
             arrowLeft.hidden = false;
@@ -60,7 +59,7 @@ function initSlider () {
 
   scroller.addEventListener('scroll', debounce(() => {
     let index = Math.round((scroller.scrollLeft / scroller.scrollWidth) * numberOfImages)
-    // setAriaPressed(index)
+    setAriaPressed(index)
 
     if ((index + 1) === numberOfImages) {
         arrowRight.hidden = true
@@ -99,36 +98,33 @@ function autoPlay () {
   }, Number(slider.dataset.autoplaySpeed))
 }
 
-function setAriaLabels() {
+function setAriaPressed(index: number) {
   if (indicators === null) return;
-
   indicators.forEach((indicator, i) => {
-      indicator.setAttribute('aria-label', `Scroll to item #${i + 1}`)
+      indicator.setAttribute('aria-pressed', i === index ? 'true' : 'false')
   })
 }
-
-// function setAriaPressed(index: number) {
-//   if (indicators === null) return;
-//   indicators.forEach((indicator, i) => {
-//       indicator.setAttribute('aria-pressed', !!(i === index))
-//   })
-// }
 
 function addListeners() {
   if (!carousel) return;
 
   carousel.addEventListener('focus', function () {
     clearInterval(interVal);
+    console.log(carousel);
   });
   carousel.addEventListener('mouseenter', function () {
     clearInterval(interVal);
+    console.log(carousel);
   });
+
 
   carousel.addEventListener('blur', function () {
     autoPlay()
+    console.log(carousel);
   });
   carousel.addEventListener('mouseleave', function () {
     autoPlay()
+    console.log(carousel);
   });
 
   if (stopBtn !== null && stopBtn !== undefined) {

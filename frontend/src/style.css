@@ -9,7 +9,7 @@ and update. Then remove the include and import your modifide styling
         Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
         sans-serif;
     --carousel-padding: 5px;
-    --outline-color: rgba(200,0,0, 0.75);
+    --outline-color: rgb(171, 254, 185);
 }
 /* Default resets */
 * {
@@ -42,15 +42,9 @@ img {
 .viewport.slider-small {
     --carousel-height: 40vh;
 }
-
-/* .carousel-frame {
-    background: #fafafa;
-        padding: 10px;
-        border-radius: 3px;
-        border: 1px solid #ddd;
-    width: calc(var(--carousel-width) + (2 * var(--carousel-padding)));
-    height: calc(var(--carousel-height) + (2 * var(--carousel-padding)));
-} */
+.viewport.slider-big {
+    --carousel-height: 60vh;
+}
 
 .slider {
     position: static;
@@ -66,13 +60,16 @@ img {
     font-style: normal;
     font-weight: 500;
     color: white;
-    font-size: 11vmin;
+    font-size: 6vmin;
     letter-spacing: .03em;
     line-height: 1;
     text-shadow: 1px 2px 4px rgb(0 0 0 / 80%);
-    width: 100%;
+    width: 60%;
     text-align: center;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid transparent;
 }
 
 .slider {
@@ -84,9 +81,8 @@ img {
     display: none;
 }
 
-.slider:focus {
+.slider:focus-visible {
     outline: 4px solid var(--outline-color);
-    outline-offset: -4px;
 }
 
 
@@ -94,7 +90,6 @@ ul.scroll-frame {
     margin: 0;
     padding: 0;
     list-style: none;
-
     display: flex;
 }
 
@@ -125,8 +120,9 @@ li .scroll-overlay {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to top right,#000000,rgba(0,0,0,0) 60%);
-    background-repeat: repeat-x;
+    background: linear-gradient(90deg,rgba(0,77,61,.85) 0,rgba(0,0,0,0) 50vw);
+    /* background-image: linear-gradient(to top right,#000000,rgba(0,0,0,0) 60%);
+    background-repeat: repeat-x; */
 }
 
 @supports (scroll-snap-align: start) {
@@ -156,24 +152,24 @@ li .scroll-overlay {
     }
 }
 
-figure.scroll-item {
+.scroll-item {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: start;
     margin: 0;
-    height: var(--carousel-height);
     width: 100%;
 }
 
 .scroll-item picture {
-    display: contents;
+    /* display: contents; */
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .scroll-item img {
     object-fit: cover;
-    width: 100%;
-    height: 100%;
+    aspect-ratio: 19 / 7;
 }
 
 .scroll-item figcaption {
@@ -192,13 +188,14 @@ figure.scroll-item {
     justify-content: center;
     position: absolute;
     bottom: 2em;
-    z-index: 2;
+    gap: 0.25rem;
 }
 .scroll-item figcaption:empty .indicators  {
     bottom: 1em;
 }
 
-ul.indicators {
+ul.indicators,
+ol.indicators {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -210,38 +207,37 @@ li.indicator {
 
 .indicator-button {
     cursor: pointer;
-    background: none;
+    background-color: white;
     border: none;
     color: white;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     padding: 0;
+    width: 2rem;
+    height: 0.25rem;
 }
 
-.indicator-button:after {
-    content: "○";
-    font-size: 1rem;
-    padding: 8px;
-}
 
-.indicator-button:hover, .indicator-button:focus {
-    color: var(--outline-color);
+.indicator-button:hover,
+.indicator-button:focus {
+    background-color: var(--outline-color);
 }
 
 .indicator-button:active {
-    color: lavender;
+    background-color: lavender;
     padding: 0;
 }
 
-.indicator-button[aria-pressed="true"]:after {
-    content: "●";
+.indicator-button[aria-pressed="true"] {
+    background-color: var(--outline-color);
 }
 
 .carousel-controls {
     display: none;
     position: absolute;
     width: 100vw;
+    height: 100%;
     top: 0;
 }
 .carousel-controls li {
@@ -249,14 +245,13 @@ li.indicator {
 }
 
 .carousel-controls button {
-    z-index: 3;
     position: absolute;
     top: 0;
     background: transparent;
     border: none;
     border-radius: 0;
     width: 3rem;
-    height: var(--carousel-height);
+    height: 100%;
 }
 
 .slider:focus .carousel-controls,
@@ -276,12 +271,12 @@ li.indicator {
     transform: rotate(180deg);
 }
 
-button svg {
+.rzt-slider button svg {
     width: 3rem;
     height: 3rem;
 }
 
-/* Instructions need work */
+/* Instructions needs work */
 .instructions {
     position: relative;
 }
@@ -300,21 +295,21 @@ button svg {
     display: none;
 }
 
-.slider:focus + .rzt-slider .focus,
-.slider:hover + .rzt-slider .hover {
+.slider:focus + .focus,
+.slider:hover + .hover {
     display: block;
 }
 
-.slider:hover + .rzt-slider .hover + .focus {
+.slider:hover + .hover + .focus {
     display: none;
 }
 
-.slider:hover:focus + .rzt-slider .hover,
-.slider:hover:focus + .rzt-slider .focus {
+.slider:hover:focus + .hover,
+.slider:hover:focus + .focus {
     display: none;
 }
 
-.slider:hover:focus + .rzt-slider .hover-and-focus {
+.slider:hover:focus + .hover-and-focus {
     display: block;
 }
 
@@ -334,7 +329,7 @@ button svg {
 }
 
 /* Resets */
-.visuallyhidden {
+.rzt-slider .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -350,20 +345,4 @@ button svg {
     * {
         animation-name: dissolve;
     }
-}
-
-button.stop-button {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-}
-
-/* This animates the circle when it switches to play */
-.circle {
-	transition: stroke-dashoffset 300ms ease-in;
-	stroke-dashoffset: 0;
-	fill: none;
-}
-.circle.play {
-	stroke-dashoffset: 314;
 }
