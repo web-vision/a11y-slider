@@ -31,7 +31,7 @@
 					</config>
 				</TCEforms>
 			</options.infinite> -->
-			<!-- <options.description>
+			<options.description>
 				<TCEforms>
 					<exclude>1</exclude>
 					<label>
@@ -42,7 +42,7 @@
 						<default>0</default>
 					</config>
 				</TCEforms>
-			</options.description> -->
+			</options.description>
 			<!-- <options.instructions>
 				<TCEforms>
 					<exclude>1</exclude>
