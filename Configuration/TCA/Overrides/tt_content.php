@@ -16,10 +16,7 @@ if (!defined('TYPO3')) {
         [
             $customLanguageFilePrefix . 'wizard.title',
             'a11y_slider',
-            'content-image'
-        ],
-        'textmedia',
-        'after'
+            'carousel-icon'
     );
 
     $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['a11y_slider'] = $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['textpic'];
