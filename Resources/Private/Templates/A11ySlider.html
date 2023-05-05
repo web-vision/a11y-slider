@@ -16,7 +16,7 @@
                                 <a class="carousel-link" href="{f:uri.typolink(parameter: '{file.link}')}" aria-labelledby="c-title"></a>
                             </f:if> -->
                     <figure class="scroll-item">
-                        <f:if condition="{file.title}">
+                        <f:if condition="{file.title} && {file.properties.tx_a11y_slider_showtitle}">
                             <header>
                                 <f:if condition="{file.link}">
                                     <f:then>
