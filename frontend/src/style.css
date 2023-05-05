@@ -10,6 +10,7 @@ and update. Then remove the include and import your modifide styling
         sans-serif;
     --carousel-padding: 5px;
     --outline-color: rgb(171, 254, 185);
+    --primary-color: rgb(0, 0, 0, 0.75);
 }
 /* Default resets */
 * {
@@ -174,10 +175,13 @@ li .scroll-overlay {
     font-weight: bold;
     font-style: italic;
     font-family: var(--font-family);
-    padding: 0.5rem;
+    padding: 1rem;
     color: white;
     position: absolute;
     bottom: 0;
+    width: 100%;
+    background-color: var(--primary-color);
+    background-color: #4d8277d6;
 }
 
 .indicators {
