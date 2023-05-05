@@ -32,6 +32,7 @@ img {
     position: relative;
     width: var(--carousel-width);
     max-width: 100%;
+    max-height: var(--carousel-height);
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -41,9 +42,6 @@ img {
 
 .viewport.slider-small {
     --carousel-height: 40vh;
-}
-.viewport.slider-big {
-    --carousel-height: 60vh;
 }
 
 .slider {
