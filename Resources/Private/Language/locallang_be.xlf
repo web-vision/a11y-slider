@@ -6,11 +6,11 @@
             <authorEmail>riad@web-vision.de</authorEmail>
         </header>
         <body>
-            <trans-unit id="wizard.title">
-                <source>Slider</source>
+            <trans-unit id="slider.title">
+                <source>A11y Slider</source>
             </trans-unit>
-            <trans-unit id="wizard.description">
-                <source>A Simple Slider</source>
+            <trans-unit id="slider.description">
+                <source>Image Slider with Accesible content</source>
             </trans-unit>
             <trans-unit id="tca.tab.sliderElements">
 				<source>Slider Elements</source>
@@ -42,6 +42,9 @@
 			<trans-unit id="flexform.sliderSmall">
 				<source>Small Slider (Height)</source>
 			</trans-unit>
+			<trans-unit id="slider.images.showTitle">
+                <source>Show Title in Frontend</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

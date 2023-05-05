@@ -6,13 +6,13 @@
             <authorEmail>riad@web-vision.de</authorEmail>
         </header>
         <body>
-            <trans-unit id="wizard.title">
-                <source>Slider</source>
-				<target>Slider</target>
+            <trans-unit id="slider.title">
+                <source>A11y Slider</source>
+				<target>A11y Slider</target>
             </trans-unit>
-            <trans-unit id="wizard.description">
-                <source>A Simple Slider</source>
-				<tartget>A Simple Slider</tartget>
+            <trans-unit id="slider.description">
+                <source>Image Slider with Accessible content</source>
+				<target>Bilder slider mit Barrierefreien inhalten</target>
             </trans-unit>
             <trans-unit id="tca.tab.sliderElements">
 				<source>Slider Elements</source>
@@ -39,17 +39,24 @@
 				<target>Pfeile einblenden (Steuerung)</target>
 			</trans-unit>
 			<trans-unit id="flexform.infinite">
-				<source>Infinite</source>
+				<source>Infinite loop</source>
+				<target>Endlosschleife</target>
 			</trans-unit>
 			<trans-unit id="flexform.autoplay">
 				<source>Autoplay</source>
+				<target>Autoplay</target>
 			</trans-unit>
 			<trans-unit id="flexform.autoplaySpeed">
 				<source>Autoplay Speed</source>
+				<target>Autoplay Geschwindigkeit</target>
 			</trans-unit>
 			<trans-unit id="flexform.sliderSmall">
 				<source>Small Slider (Height)</source>
+				<target>Kleiner Slider (Höhe)</target>
 			</trans-unit>
+			<trans-unit id="slider.images.showTitle">
+                <source>Show Title in Frontend</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
