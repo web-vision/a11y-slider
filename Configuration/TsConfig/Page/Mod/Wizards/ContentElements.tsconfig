@@ -1,9 +1,9 @@
 mod.wizards.newContentElement.wizardItems.common {
 	elements {
 		a11y_slider {
-			iconIdentifier = content-image
-			title = LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:wizard.title
-			description = LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:wizard.description
+			iconIdentifier = carousel-icon
+			title = LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:slider.title
+			description = LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:slider.description
 			tt_content_defValues {
 				CType = a11y_slider
 			}

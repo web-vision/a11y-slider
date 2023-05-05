@@ -12,9 +12,6 @@
                     <f:if condition="{slider.options.overlay}">
                         <div class="scroll-overlay"></div>
                     </f:if>
-                    <!-- <f:if condition="{file.link}">
-                                <a class="carousel-link" href="{f:uri.typolink(parameter: '{file.link}')}" aria-labelledby="c-title"></a>
-                            </f:if> -->
                     <figure class="scroll-item">
                         <f:if condition="{file.title} && {file.properties.tx_a11y_slider_showtitle}">
                             <header>
@@ -47,7 +44,8 @@
             <ul class="carousel-controls">
                 <li>
                     <button class="btn-previous" id="btn-previous" hidden>
-                        <span class="visuallyhidden">Vorheriges Bild</span>
+                        <span class="visuallyhidden"><f:translate key="LLL:EXT:a11y_slider/Resources/Private/Language/locallang.xlf:tx_a11y_slider.btnPrevious" /></span>
+
                         <svg viewBox="0 0 640 640" width="60" height="60">
                             <defs>
                                 <path d="M113.4 318.3L434.36 2.03L456.43 24.42L135.47 340.7L113.4 318.3Z"
@@ -80,7 +78,7 @@
                 </li>
                 <li>
                     <button class="btn-next" id="btn-next">
-                        <span class="visuallyhidden">Nächstes Bild</span>
+                        <span class="visuallyhidden"><f:translate key="LLL:EXT:a11y_slider/Resources/Private/Language/locallang.xlf:tx_a11y_slider.btnNext" /></span>
                         <svg viewBox="0 0 640 640" width="60" height="60">
                             <defs>
                                 <path d="M113.4 318.3L434.36 2.03L456.43 24.42L135.47 340.7L113.4 318.3Z"

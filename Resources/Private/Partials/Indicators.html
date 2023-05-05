@@ -5,14 +5,14 @@
                 <f:then>
                     <li class="indicator">
                         <button class="indicator-button" aria-pressed="true">
-                            <span class="visuallyhidden">Aktuelles Bild</span>
+                            <span class="visuallyhidden"><f:translate key="LLL:EXT:a11y_slider/Resources/Private/Language/locallang.xlf:tx_a11y_slider.currentImage" /></span>
                         </button>
                     </li>
                 </f:then>
                 <f:else>
                     <li class="indicator">
                         <button class="indicator-button">
-                            <span class="visuallyhidden">Bild {it.cycle} anziegen</span>
+                            <span class="visuallyhidden"><f:translate key="LLL:EXT:a11y_slider/Resources/Private/Language/locallang.xlf:tx_a11y_slider.showImage" /> {it.cycle}</span>
                         </button>
                     </li>
                 </f:else>

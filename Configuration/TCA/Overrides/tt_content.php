@@ -4,22 +4,25 @@ if (!defined('TYPO3')) {
     die('Access denied.');
 }
 
-(function () {
+(static function (): void {
+    $ll = function (string $langKey): string {
+        return 'LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:' . $langKey;
+    };
+
     $languageFilePrefix = 'LLL:EXT:fluid_styled_content/Resources/Private/Language/Database.xlf:';
-    $customLanguageFilePrefix = 'LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:';
     $frontendLanguageFilePrefix = 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:';
 
-    // Add the CType "a11y_slider"
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
         'tt_content',
         'CType',
         [
-            $customLanguageFilePrefix . 'wizard.title',
+            $ll('slider.title'),
             'a11y_slider',
             'carousel-icon'
+        ]
     );
 
-    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['a11y_slider'] = $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['textpic'];
+    $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['a11y_slider'] = 'carousel-icon';
 
     // Define what fields to display
     $GLOBALS['TCA']['tt_content']['types']['a11y_slider'] = [
@@ -27,22 +30,12 @@ if (!defined('TYPO3')) {
                 --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
                 --palette--;' . $languageFilePrefix . 'tt_content.palette.mediaAdjustments;mediaAdjustments,
                 pi_flexform,
-            --div--;' . $customLanguageFilePrefix . 'tca.tab.sliderElements,
+                --div--;' . $ll('tca.tab.sliderElements') .',
             image
         ',
-        'columnsOverrides' => [
-            'image' => [
-                'label'  => $languageFilePrefix . 'tt_content.media_references',
-                'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig('image', [
-                    'appearance'    => [
-                        'createNewRelationLinkTitle' => $languageFilePrefix . 'tt_content.media_references.addFileReference'
-                    ],
-                ], $GLOBALS['TYPO3_CONF_VARS']['SYS']['mediafile_ext'])
-            ]
-        ]
     ];
 
-    // Add a flexform to the wv_slider CType
+    // Add a flexform to the a11y_slider CType
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
         '',
         'FILE:EXT:a11y_slider/Configuration/FlexForms/slider.xml',
@@ -59,9 +52,9 @@ if (!defined('TYPO3')) {
     }
 
     $aspectRatios = [
-        '16:7' => [
-            'title' => '16:7',
-            'value' => 16 / 7
+        '19:7' => [
+            'title' => '19:7',
+            'value' => 19 / 7
         ],
     ];
 
