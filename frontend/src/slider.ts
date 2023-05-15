@@ -110,21 +110,17 @@ function addListeners() {
 
   carousel.addEventListener('focus', function () {
     clearInterval(interVal);
-    console.log(carousel);
   });
   carousel.addEventListener('mouseenter', function () {
     clearInterval(interVal);
-    console.log(carousel);
   });
 
 
   carousel.addEventListener('blur', function () {
     autoPlay()
-    console.log(carousel);
   });
   carousel.addEventListener('mouseleave', function () {
     autoPlay()
-    console.log(carousel);
   });
 
   if (stopBtn !== null && stopBtn !== undefined) {
@@ -133,17 +129,5 @@ function addListeners() {
     });
   }
 }
-
-
-  // @TODO this would be the only option to split the heading text in 2 lines still needs work
-  // let getText = document.querySelector('#c-title').textContent.split(' ');
-  // console.log(getText);
-  // getText.map((word, index) => {
-  //     if (index == 4) {
-  //         document.querySelector('#c-title').innerHTML += `<span>\n ${word}</span>`;
-  //         return;
-  //     }
-  //     document.querySelector('#c-title').innerHTML += `<span>${word}</span>`;
-  // })
 
 export { initSlider };
