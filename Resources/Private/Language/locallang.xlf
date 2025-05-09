@@ -7,17 +7,17 @@
         </header>
         <body>
             <trans-unit id="tx_a11y_slider.showImage">
-				<source>Show Image</source>
-			</trans-unit>
+                <source>Show Image</source>
+            </trans-unit>
             <trans-unit id="tx_a11y_slider.currentImage">
-				<source>Current image</source>
-			</trans-unit>
+                <source>Current image</source>
+            </trans-unit>
             <trans-unit id="tx_a11y_slider.btnNext">
-				<source>Next Image</source>
-			</trans-unit>
+                <source>Next Image</source>
+            </trans-unit>
             <trans-unit id="tx_a11y_slider.btnPrevious">
-				<source>Previous Image</source>
-			</trans-unit>
+                <source>Previous Image</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

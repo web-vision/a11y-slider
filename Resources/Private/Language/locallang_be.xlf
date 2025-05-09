@@ -13,36 +13,36 @@
                 <source>Image Slider with Accesible content</source>
             </trans-unit>
             <trans-unit id="tca.tab.sliderElements">
-				<source>Slider Elements</source>
-			</trans-unit>
-			<trans-unit id="flexform.instructions">
-				<source>Enable Instructions</source>
-			</trans-unit>
-			<trans-unit id="flexform.description">
-				<source>Enable Description</source>
-			</trans-unit>
-			<trans-unit id="flexform.overlay">
-				<source>Background Overlay</source>
-			</trans-unit>
-			<trans-unit id="flexform.dots">
-				<source>Enable Dots (Controls)</source>
-			</trans-unit>
-			<trans-unit id="flexform.arrows">
-				<source>Enable Arrows (Controls)</source>
-			</trans-unit>
-			<trans-unit id="flexform.infinite">
-				<source>Infinite</source>
-			</trans-unit>
-			<trans-unit id="flexform.autoplay">
-				<source>Autoplay</source>
-			</trans-unit>
-			<trans-unit id="flexform.autoplaySpeed">
-				<source>Autoplay Speed</source>
-			</trans-unit>
-			<trans-unit id="flexform.sliderSmall">
-				<source>Small Slider (Height)</source>
-			</trans-unit>
-			<trans-unit id="slider.images.showTitle">
+                <source>Slider Elements</source>
+            </trans-unit>
+            <trans-unit id="flexform.instructions">
+                <source>Enable Instructions</source>
+            </trans-unit>
+            <trans-unit id="flexform.description">
+                <source>Enable Description</source>
+            </trans-unit>
+            <trans-unit id="flexform.overlay">
+                <source>Background Overlay</source>
+            </trans-unit>
+            <trans-unit id="flexform.dots">
+                <source>Enable Dots (Controls)</source>
+            </trans-unit>
+            <trans-unit id="flexform.arrows">
+                <source>Enable Arrows (Controls)</source>
+            </trans-unit>
+            <trans-unit id="flexform.infinite">
+                <source>Infinite</source>
+            </trans-unit>
+            <trans-unit id="flexform.autoplay">
+                <source>Autoplay</source>
+            </trans-unit>
+            <trans-unit id="flexform.autoplaySpeed">
+                <source>Autoplay Speed</source>
+            </trans-unit>
+            <trans-unit id="flexform.sliderSmall">
+                <source>Small Slider (Height)</source>
+            </trans-unit>
+            <trans-unit id="slider.images.showTitle">
                 <source>Show Title in Frontend</source>
             </trans-unit>
         </body>

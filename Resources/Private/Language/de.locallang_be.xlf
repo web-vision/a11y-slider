@@ -8,53 +8,53 @@
         <body>
             <trans-unit id="slider.title">
                 <source>A11y Slider</source>
-				<target>A11y Slider</target>
+                <target>A11y Slider</target>
             </trans-unit>
             <trans-unit id="slider.description">
                 <source>Image Slider with Accessible content</source>
-				<target>Bilder slider mit Barrierefreien inhalten</target>
+                <target>Bilder slider mit Barrierefreien inhalten</target>
             </trans-unit>
             <trans-unit id="tca.tab.sliderElements">
-				<source>Slider Elements</source>
-				<target>Slider Elemente</target>
-			</trans-unit>
-			<trans-unit id="flexform.instructions">
-				<source>Enable Instructions</source>
-				<target>Anleitungstext aktivieren</target>
-			</trans-unit>
-			<trans-unit id="flexform.description">
-				<source>Enable Image Description</source>
-				<target>Bildbeschreibung einblenden</target>
-			</trans-unit>
-			<trans-unit id="flexform.overlay">
-				<source>Background Overlay</source>
-				<target>Hintergrund (Grau) einblenden</target>
-			</trans-unit>
-			<trans-unit id="flexform.dots">
-				<source>Enable Dots (Controls)</source>
-				<target>Punkte einblenden (Steuerung)</target>
-			</trans-unit>
-			<trans-unit id="flexform.arrows">
-				<source>Enable Arrows (Controls)</source>
-				<target>Pfeile einblenden (Steuerung)</target>
-			</trans-unit>
-			<trans-unit id="flexform.infinite">
-				<source>Infinite loop</source>
-				<target>Endlosschleife</target>
-			</trans-unit>
-			<trans-unit id="flexform.autoplay">
-				<source>Autoplay</source>
-				<target>Autoplay</target>
-			</trans-unit>
-			<trans-unit id="flexform.autoplaySpeed">
-				<source>Autoplay Speed</source>
-				<target>Autoplay Geschwindigkeit</target>
-			</trans-unit>
-			<trans-unit id="flexform.sliderSmall">
-				<source>Small Slider (Height)</source>
-				<target>Kleiner Slider (Höhe)</target>
-			</trans-unit>
-			<trans-unit id="slider.images.showTitle">
+                <source>Slider Elements</source>
+                <target>Slider Elemente</target>
+            </trans-unit>
+            <trans-unit id="flexform.instructions">
+                <source>Enable Instructions</source>
+                <target>Anleitungstext aktivieren</target>
+            </trans-unit>
+            <trans-unit id="flexform.description">
+                <source>Enable Image Description</source>
+                <target>Bildbeschreibung einblenden</target>
+            </trans-unit>
+            <trans-unit id="flexform.overlay">
+                <source>Background Overlay</source>
+                <target>Hintergrund (Grau) einblenden</target>
+            </trans-unit>
+            <trans-unit id="flexform.dots">
+                <source>Enable Dots (Controls)</source>
+                <target>Punkte einblenden (Steuerung)</target>
+            </trans-unit>
+            <trans-unit id="flexform.arrows">
+                <source>Enable Arrows (Controls)</source>
+                <target>Pfeile einblenden (Steuerung)</target>
+            </trans-unit>
+            <trans-unit id="flexform.infinite">
+                <source>Infinite loop</source>
+                <target>Endlosschleife</target>
+            </trans-unit>
+            <trans-unit id="flexform.autoplay">
+                <source>Autoplay</source>
+                <target>Autoplay</target>
+            </trans-unit>
+            <trans-unit id="flexform.autoplaySpeed">
+                <source>Autoplay Speed</source>
+                <target>Autoplay Geschwindigkeit</target>
+            </trans-unit>
+            <trans-unit id="flexform.sliderSmall">
+                <source>Small Slider (Height)</source>
+                <target>Kleiner Slider (Höhe)</target>
+            </trans-unit>
+            <trans-unit id="slider.images.showTitle">
                 <source>Show Title in Frontend</source>
             </trans-unit>
         </body>

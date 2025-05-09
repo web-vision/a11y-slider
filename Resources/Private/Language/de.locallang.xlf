@@ -7,21 +7,21 @@
         </header>
         <body>
             <trans-unit id="tx_a11y_slider.showImage">
-				<source>Show Image</source>
+                <source>Show Image</source>
                 <target>Zeige Bild</target>
-			</trans-unit>
+            </trans-unit>
             <trans-unit id="tx_a11y_slider.currentImage">
-				<source>Current image</source>
+                <source>Current image</source>
                 <target>Aktuelles Bild</target>
-			</trans-unit>
-             <trans-unit id="tx_a11y_slider.btnNext">
-				<source>Next Image</source>
+            </trans-unit>
+            <trans-unit id="tx_a11y_slider.btnNext">
+                <source>Next Image</source>
                 <target>Nächstes Bild</target>
-			</trans-unit>
+            </trans-unit>
             <trans-unit id="tx_a11y_slider.btnPrevious">
-				<source>Previous Image</source>
+                <source>Previous Image</source>
                 <target>Vorheriges Bild</target>
-			</trans-unit>
+            </trans-unit>
         </body>
     </file>
 </xliff>

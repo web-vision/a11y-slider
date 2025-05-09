@@ -1,3 +1,7 @@
+<html
+    data-namespace-typo3-fluid="true"
+    xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+>
 <picture>
     <source
         srcset="{f:uri.image(image:file, cropVariant: 'large', maxWidth: 1601, fileExtension: 'webp')}"
@@ -33,3 +37,4 @@
         loading="{f:if(condition: '{index.isFirst}', then: 'eager', else: 'lazy')}"
         decoding="async" />
 </picture>
+</html>

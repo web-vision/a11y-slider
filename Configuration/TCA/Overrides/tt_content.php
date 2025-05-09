@@ -26,13 +26,13 @@ if (!defined('TYPO3')) {
 
     // Define what fields to display
     $GLOBALS['TCA']['tt_content']['types']['a11y_slider'] = [
-        'showitem' => '
-                --palette--;' . $frontendLanguageFilePrefix . 'palette.general;general,
-                --palette--;' . $languageFilePrefix . 'tt_content.palette.mediaAdjustments;mediaAdjustments,
-                pi_flexform,
-                --div--;' . $ll('tca.tab.sliderElements') .',
-            image
-        ',
+        'showitem' => implode(',', [
+            '--palette--;' . $frontendLanguageFilePrefix . 'palette.general;general',
+            '--palette--;' . $languageFilePrefix . 'tt_content.palette.mediaAdjustments;mediaAdjustments',
+            'pi_flexform',
+            '--div--;' . $ll('tca.tab.sliderElements'),
+            'image'
+        ]),
     ];
 
     // Add a flexform to the a11y_slider CType
@@ -41,14 +41,9 @@ if (!defined('TYPO3')) {
         'FILE:EXT:a11y_slider/Configuration/FlexForms/slider.xml',
         'a11y_slider'
     );
-})();
 
-/**
- * A11ySlider
- */
-(function (string $contentElementName, string $table) {
-    if (!isset($GLOBALS['TCA'][$table]['types'][$contentElementName]['columnsOverrides'])) {
-        $GLOBALS['TCA'][$table]['types'][$contentElementName]['columnsOverrides'] = [];
+    if (!isset($GLOBALS['TCA']['tt_content']['types']['a11y_slider']['columnsOverrides'])) {
+        $GLOBALS['TCA']['tt_content']['types']['a11y_slider']['columnsOverrides'] = [];
     }
 
     $aspectRatios = [
@@ -59,7 +54,7 @@ if (!defined('TYPO3')) {
     ];
 
     \TYPO3\CMS\Core\Utility\ArrayUtility::mergeRecursiveWithOverrule(
-        $GLOBALS['TCA'][$table]['types'][$contentElementName]['columnsOverrides'],
+        $GLOBALS['TCA']['tt_content']['types']['a11y_slider']['columnsOverrides'],
         [
             'assets' => [
                 'config' => [
@@ -89,4 +84,4 @@ if (!defined('TYPO3')) {
             ]
         ]
     );
-})('a11y_slider', 'tt_content');
+})();

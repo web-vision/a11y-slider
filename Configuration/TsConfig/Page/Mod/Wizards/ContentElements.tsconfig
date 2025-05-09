@@ -9,5 +9,6 @@ mod.wizards.newContentElement.wizardItems.common {
 			}
 		}
 	}
+
 	show := addToList(a11y_slider)
 }

@@ -4,18 +4,17 @@ lib.contentElement {
     layoutRootPaths.200 = EXT:a11y_slider/Resources/Private/Layout
 }
 
-tt_content {
-	a11y_slider < lib.contentElement
-	a11y_slider {
-		templateName = A11ySlider
-		dataProcessing {
-			10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-			10 {
-				references.fieldName = image
-			}
-            20 = WebVision\A11ySlider\DataProcessing\SliderProcessor
-		}
-	}
+tt_content.a11y_slider < lib.contentElement
+tt_content.a11y_slider {
+    templateName = A11ySlider
+    dataProcessing {
+        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+        10 {
+            references.fieldName = image
+        }
+
+        20 = WebVision\A11ySlider\DataProcessing\SliderProcessor
+    }
 }
 
 // Hide Elements if JS is disabled
@@ -23,6 +22,7 @@ page.headerData {
     3 = TEXT
     3.value = <noscript><style>.indicators { display:none !important; }</style></noscript>
 }
+
 page.includeCSS {
     style = EXT:a11y_slider/Resources/Public/index.css
     style.inline = 1
