@@ -1,4 +1,3 @@
-
 {
   "name": "web-vision/a11y-slider",
   "type": "typo3-cms-extension",
@@ -7,20 +6,22 @@
   "license": "GPL-2.0-or-later",
   "version": "1.0.0",
   "require": {
-      "typo3/cms-core": "^11.5"
+    "typo3/cms-core": "^11.5 || ^12.4 || ^13.4"
   },
-  "authors": [{
+  "authors": [
+    {
       "name": "Riad Zejnilagic Trumic",
       "email": "riad@web-vision.de"
-  }],
+    }
+  ],
   "autoload": {
-      "psr-4": {
-          "WebVision\\A11ySlider\\": "Classes/"
-      }
+    "psr-4": {
+      "WebVision\\A11ySlider\\": "Classes/"
+    }
   },
   "extra": {
-      "typo3/cms": {
-          "extension-key": "a11y_slider"
-      }
+    "typo3/cms": {
+      "extension-key": "a11y_slider"
     }
+  }
 }
