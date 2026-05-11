@@ -7,89 +7,75 @@
         <type>array</type>
         <el>
             <options.autoplay>
-                <TCEforms>
-                    <exclude>1</exclude>
-                    <label>
-                        LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:flexform.autoplay
-                    </label>
-                    <config>
-                        <type>check</type>
-                        <default>0</default>
-                    </config>
-                </TCEforms>
+                <exclude>1</exclude>
+                <label>
+                    LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:flexform.autoplay
+                </label>
+                <config>
+                    <type>check</type>
+                    <default>0</default>
+                </config>
             </options.autoplay>
             <options.description>
-                <TCEforms>
-                    <exclude>1</exclude>
-                    <label>
-                        LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:flexform.description
-                    </label>
-                    <config>
-                        <type>check</type>
-                        <default>0</default>
-                    </config>
-                </TCEforms>
+                <exclude>1</exclude>
+                <label>
+                    LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:flexform.description
+                </label>
+                <config>
+                    <type>check</type>
+                    <default>0</default>
+                </config>
             </options.description>
             <options.overlay>
-                <TCEforms>
-                    <exclude>1</exclude>
-                    <label>
-                        LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:flexform.overlay
-                    </label>
-                    <config>
-                        <type>check</type>
-                        <default>1</default>
-                    </config>
-                </TCEforms>
+                <exclude>1</exclude>
+                <label>
+                    LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:flexform.overlay
+                </label>
+                <config>
+                    <type>check</type>
+                    <default>1</default>
+                </config>
             </options.overlay>
             <options.dots>
-                <TCEforms>
-                    <exclude>1</exclude>
-                    <label>
-                        LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:flexform.dots
-                    </label>
-                    <config>
-                        <type>check</type>
-                        <default>1</default>
-                    </config>
-                </TCEforms>
+                <exclude>1</exclude>
+                <label>
+                    LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:flexform.dots
+                </label>
+                <config>
+                    <type>check</type>
+                    <default>1</default>
+                </config>
             </options.dots>
             <options.arrows>
-                <TCEforms>
-                    <exclude>1</exclude>
-                    <label>
-                        LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:flexform.arrows
-                    </label>
-                    <config>
-                        <type>check</type>
-                        <default>0</default>
-                    </config>
-                </TCEforms>
+                <exclude>1</exclude>
+                <label>
+                    LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:flexform.arrows
+                </label>
+                <config>
+                    <type>check</type>
+                    <default>0</default>
+                </config>
             </options.arrows>
             <options.sliderSmall>
-                <TCEforms>
-                    <exclude>1</exclude>
-                    <label>
-                        LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:flexform.sliderSmall
-                    </label>
-                    <config>
-                        <type>check</type>
-                        <default>0</default>
-                    </config>
-                </TCEforms>
+                <exclude>1</exclude>
+                <label>
+                    LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:flexform.sliderSmall
+                </label>
+                <config>
+                    <type>check</type>
+                    <default>0</default>
+                </config>
             </options.sliderSmall>
             <options.autoplaySpeed>
-                <TCEforms>
-                    <exclude>1</exclude>
-                    <label>
-                        LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:flexform.autoplaySpeed
-                    </label>
-                    <config>
-                        <type>input</type>
-                        <default>4000</default>
-                        <eval>int</eval>
-                    </config>
-                </TCEforms>
+                <exclude>1</exclude>
+                <label>
+                    LLL:EXT:a11y_slider/Resources/Private/Language/locallang_be.xlf:flexform.autoplaySpeed
+                </label>
+                <config>
+                    <type>input</type>
+                    <default>4000</default>
+                    <eval>int</eval>
+                </config>
             </options.autoplaySpeed>
         </el>
     </ROOT>
